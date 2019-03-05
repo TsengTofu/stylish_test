@@ -7,8 +7,6 @@ function statusChangeCallback(response) {
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
         localStorage.setItem('accessToken', response.authResponse.accessToken);
-        console.log(localStorage.setItem('accessToken', response.authResponse.accessToken))
-        console.log(accessToken);
         testAPI();
     } else {
         // The person is not logged into your app or we are unable to tell.
@@ -62,8 +60,6 @@ function testAPI() {
         // console.log(response.picture.data.width);
         const imgUrl = `https://graph.facebook.com/${response.id}/picture?width=9999`;
         const profileInfo = document.querySelector(".profile_content_login_membership");
-        
-
         profileInfo.style.display = "block";
         profileInfo.innerHTML = `
         <div class="user_photo"><img src="${imgUrl}" alt=""></div>
