@@ -1,0 +1,658 @@
+.wrapper {
+  font-family: "微軟正黑體";
+  margin: 0 auto;
+}
+
+.wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.wrapper a:link {
+  text-decoration: none;
+  color: #313538;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: block;
+}
+
+.wrapper a:visited {
+  color: #313538;
+}
+
+.header {
+  border-bottom: solid 20px #313538;
+  padding: 1vw 4vw;
+}
+
+.header .logo {
+  display: block;
+  max-width: 516px;
+  width: 15%;
+  float: left;
+  height: auto;
+  margin: 0.4vw 0 0 0;
+}
+
+.header .menu {
+  float: left;
+  width: 53%;
+  box-sizing: border-box;
+  padding: 1.5vw 0vw 0vw;
+}
+
+.header .menu li:first-child a {
+  border: none;
+}
+
+.header .menu li a {
+  float: left;
+  padding: 0 2vw;
+  border-left: 1px solid #313538;
+  font-size: 20px;
+  letter-spacing: 1vw;
+  text-indent: 1vw;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.header .menu li a:hover {
+  color: #8b572a;
+}
+
+.header .right_part {
+  width: 15%;
+  float: left;
+  padding: 0.5vw;
+  box-sizing: border-box;
+  margin-left: 2%;
+  /* 後來發現跟排版不一樣 */
+}
+
+.right_most{
+  width: 12%;
+  float: right;
+  padding: 0.5vw;
+  box-sizing: border-box;
+  margin-left: 3%;
+  z-index: 999;
+}
+
+.header .right_part li, .header .right_most li {
+  float: left;
+  margin: 0 0.5vw;
+  list-style: none;
+  position: relative;
+}
+
+.m_btn p {
+  display: none;
+  color: #fff;
+}
+
+.m_btn #cart_number {
+  display: block;
+  border-radius: 999em;
+  width: 1vw;
+  height: 1vw;
+  line-height: 1vw;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  background: #f25b41;
+  text-align: center;
+  border: 2px solid #fff;
+  font-size: 12px;
+}
+
+.header .right_part li img, .header .right_most li img {
+  max-width: 44px;
+}
+
+.header .right_part .search_bar {
+  position: relative;
+  margin: 1.5% 0.5vw;
+}
+
+.header .right_part .search_bar input:focus {
+  outline: none;
+}
+
+.header .right_part .search_bar input {
+  border-radius: 20px;
+  height: 32px;
+  font-size: 15px;
+  padding-left: 20px;
+  border-style: hidden;
+  border: 1.5px solid #cccccc;
+  color: #8b572a;
+}
+
+.header .right_part .search_bar>img {
+  position: absolute;
+  top: -3px;
+  right: 1vw;
+}
+
+.header .right_part .search_bar>img:hover {
+  background: url("../img/search-hover.png");
+}
+
+/*--------Header End--------*/
+
+.shop_list {
+  width: 70%;
+  margin: 2vw auto;
+}
+
+.shop_list ul {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.shop_list li {
+  width: 31%;
+  float: left;
+  margin: 0.5vw;
+  line-height: 1.5;
+}
+
+.shop_list li img {
+  max-width: 720px;
+}
+
+/*--------Colors Pick--------*/
+
+.shop_list .color_list li {
+  display: block;
+  width: 1.2vw;
+  height: 1.2vw;
+}
+
+.color_9baac2 {
+  background: #9baac2;
+}
+
+.color_d9d9d9 {
+  background: #d9d9d9;
+}
+
+.color_8b572a {
+  background: #8b572a;
+}
+
+.color_000 {
+  background: #000000;
+}
+
+.color_c49871 {
+  background: #c49871;
+}
+
+.color_848484 {
+  background: #848484;
+}
+
+.color_c0c0b5 {
+  background: #c0c0b5;
+}
+
+/*--------Shop List End--------*/
+
+.footer {
+  background: #313538;
+  color: #fff;
+  padding: 2vw;
+  text-align: center;
+}
+
+.footer_content {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.footer a:link, .footer a:visited {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: #8b572a;
+}
+
+.footer .footer_left {
+  width: 63%;
+  float: left;
+  font-size: 0.8vw;
+  margin-top: 1%;
+  line-height: 1.4;
+}
+
+.footer .footer_right {
+  float: left;
+  width: 18%;
+}
+
+.footer .footer_left li {
+  border-right: 1px solid #fff;
+  padding: 0 2vw;
+}
+
+.footer .footer_left li:last-child {
+  border: none;
+}
+
+.footer .footer_left li, .footer .footer_right li {
+  display: block;
+  float: left;
+}
+
+.footer .social img {
+  max-width: 40px;
+  width: 85%;
+}
+
+.footer .social a {
+  width: 75%;
+  margin: 0 0.5vw;
+}
+
+.footer .copyright {
+  font-size: 9px;
+  line-height: 3;
+  color: #57595b;
+  float: left;
+}
+
+/*--------清除浮動--------*/
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+#banner {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  /* 藏起來橫向卷軸 */
+}
+
+#banner>.banners {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  /* 背景圖片水平垂直置中 */
+  margin: 0 auto;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+.banner>.banners:first-child {
+  left: 0;
+}
+
+.banner>.in {
+  animation: slide-in 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.banner>.out {
+  animation: slide-out 0.5s;
+  animation-fill-mode: forwards;
+  transition: ease;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    left: 100%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    opacity: 1;
+    right: 100%;
+  }
+  100% {
+    opacity: 0;
+    right: 0%;
+  }
+}
+
+.banners h3 {
+  position: absolute;
+  top: 8.5vw;
+  left: 20.5vw;
+  font-size: 1.6vw;
+  width: 35%;
+  line-height: 1.5;
+}
+
+.banners p {
+  font-size: 1vw;
+  margin-top: 2vw;
+}
+
+/*--------RWD Layout--------*/
+
+@media screen and (max-width: 1280px) {
+  .header {
+    padding: 1vw 3vw;
+  }
+
+  .header .logo{
+    margin: 1.5vw 0 0 0;
+  }
+  .header .menu {
+    width: 44%;
+    padding: 2vw 2vw 0;
+  }
+  .header .menu li a {
+    padding: 0 1vw;
+  }
+  .header .right_part{
+    width: 20%;
+  }
+  .right_most{
+    margin-left: 3%;
+    width: 15%;
+  }
+
+  .banners h3 {
+    top: 15vw;
+    left: 21vw;
+    font-size: 2.4vw;
+  }
+  
+  .banners p {
+    font-size: 1.8vw;
+  }
+
+  .footer_content {
+    width: 82%;
+  }
+  .footer .footer_left {
+    width: 62%;
+  }
+  .footer .footer_right {
+    width: 19%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header .logo {
+    width: 14%;
+  }
+  .header .right_most li, .footer .social a {
+    margin: 0;
+  }
+  .footer_content {
+    width: 83%;
+  }
+  .footer .footer_left {
+    width: 60%;
+    font-size: 0.5vw;
+  }
+  .header .menu li {
+    float: left;
+    width: 33%;
+  }
+  .header .menu li a {
+    color: #fff;
+    letter-spacing: 0px;
+    border-left: 2px solid #fff;
+    padding: 2vw 12vw;
+    text-indent: 0;
+    font-size: 1.2em;
+  }
+  .header {
+    border: none;
+    padding: 0;
+  }
+  .header .logo {
+    width: 42%;
+    margin: 0 auto;
+    float: none;
+    padding: 4vw;
+  }
+  .header .menu {
+    width: 100%;
+    background: #313538;
+    float: none;
+    box-sizing: border-box;
+    padding: 4vw 2vw;
+  }
+  .header .right_part {
+    float: left;
+    padding:0;
+    width: 0;
+  }
+  .header .right_part .search_bar input {
+    display: none;
+  }
+  .header .right_part .search_bar {
+    display: block;
+    position: inherit;
+  }
+  .header .right_part .search_bar>img {
+    top: 3vw;
+    right: 4vw;
+  }
+
+  .banners h3 {
+    top: 14vw;
+    left: 10vw;
+    font-size: 3.2vw;
+  }
+  
+  .banners p {
+    font-size: 2vw;
+  }
+  .shop_list {
+    width: 90%;
+  }
+  .shop_list li {
+    width: 48%;
+    font-size: 14px;
+    letter-spacing: 0;
+    margin: 3vw 0.8vw;
+  }
+  .header .right_most {
+    position: fixed;
+    bottom: 0;
+    background: #313538;
+    width: 100%;
+    border-top: 2px solid #fff;
+    margin-left: 0;
+  }
+  .header .right_most li {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0 18vw;
+    margin: 3vw 0;
+  }
+  .header .right_most li:first-child {
+    border-right: 2px solid #fff;
+  }
+  .header .right_most li:first-child img {
+    display: none;
+  }
+  .header .right_most li:first-child::before {
+    content: url("../img/cart-mobile.png");
+    float: left;
+  }
+  /*google image replace with only css*/
+  .header .right_most li:last-child::before {
+    content: url("../img/member-mobile.png");
+    float: left;
+  }
+  .header .right_most li:last-child img {
+    display: none;
+  }
+  .m_btn {
+    width: 50%;
+    float: left;
+  }
+  .m_btn img {
+    float: left;
+  }
+  .m_btn p {
+    display: block;
+    color: #fff;
+    float: left;
+    line-height: 2.6;
+    text-align: center;
+  }
+  .m_btn a {
+    position: relative;
+  }
+  .m_btn #cart_number {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+  }
+  .shop_list .color_list li {
+    width: 4vw;
+    height: 4vw;
+  }
+  .footer {
+    margin-bottom: 16vw;
+  }
+  .footer .footer_left {
+    width: 60%;
+    float: left;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 2vw;
+    box-sizing: border-box;
+  }
+  .footer .footer_left li {
+    border: none;
+    text-align: left;
+    padding: 0;
+    width: 50%;
+    font-size: 14px;
+    margin: 1vw 0;
+  }
+  .footer_content {
+    width: 95%;
+  }
+  .footer .footer_right {
+    width: 40%;
+    line-height: 5;
+  }
+  .footer .footer_left li:nth-child(2) {
+    order: 3;
+  }
+  .footer .footer_left li:nth-child(3) {
+    order: 5;
+  }
+  .footer .footer_left li:nth-child(4) {
+    order: 2;
+  }
+  .footer .footer_left li:nth-child(5) {
+    order: 4;
+    align-self: end;
+  }
+  .footer .copyright {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #banner {
+    height: 200px;
+  }
+  .banners h3 {
+    position: absolute;
+    top: 8vw;
+    left: 6vw;
+    font-size: 4vw;
+    width: 50%;
+    line-height: 1.5;
+  }
+  .header .menu li a {
+    color: #fff;
+    letter-spacing: 0px;
+    border-left: 2px solid #fff;
+    padding: 2vw 10vw;
+    box-sizing: border-box;
+    text-indent: 0;
+  }
+  .header .menu li {
+    float: left;
+    width: 33.3%;
+  }
+  .header .right_most li {
+    padding: 0 11vw;
+  }
+  /*--------footer 不照切版本--------
+    /*.footer{
+        margin-bottom: 16vw;
+    }
+    .footer .footer_left{
+        font-size: 4vw;
+        float: none;
+        width: 100%;
+    }
+
+    .footer .footer_left li {
+        border: none;
+        float: none;
+        width: 100%;
+        line-height: 2.5;
+    }
+    .footer .footer_right{
+        float: none;
+        width: 51%;
+        margin:0 auto;
+    }
+    .footer .social a{
+        margin:2vw;
+    }
+    .footer .footer_right li:last-child{
+        float: none;
+    }
+    .footer_content{
+        width: 90%;
+    }*/
+}
+
+@media screen and (max-width: 360px) {
+  .header .menu {
+    padding: 4vw 0vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header .right_most li {
+    padding: 0 9vw;
+  }
+  .header .menu li a {
+    padding: 2vw 10vw;
+  }
+  .shop_list li {
+    vertical-align: top;
+  }
+  .footer {
+    margin-bottom: 20vw;
+  }
+  .footer .footer_left {
+    width: 58%;
+  }
+  .footer .footer_right {
+    width: 42%;
+  }
+}

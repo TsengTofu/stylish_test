@@ -1,0 +1,362 @@
+/* *{
+    box-sizing: border-box;
+} */
+
+.wrapper .cart_container {
+    width: 70%;
+    margin: 2vw auto;
+}
+
+/* 麵包屑 */
+
+.bread_crumbs a, .bread_crumbs p {
+    float: left;
+}
+
+/* 最上方標題 數量 單價 小計 */
+
+.title_list {
+    line-height: 4;
+}
+
+.title_list .cart_total_left {
+    float: left;
+}
+
+.right_title {
+    width: 60%;
+    float: right;
+    text-align: center;
+}
+
+.right_title li {
+    width: 25%;
+    float: left;
+}
+
+/* 會動態生成的部分 */
+
+.nothing {
+    padding: 4vw;
+    text-align: center;
+    font-size: 20px;
+}
+
+.order_list_content {
+    border: solid 1px #979797;
+}
+
+.order_list_content li {
+    width: 100%;
+    padding: 2vw;
+    box-sizing: border-box;
+}
+
+/* 都是左半邊的東西 */
+
+.order_list_content li .order_left_content {
+    width: 40%;
+}
+
+.order_list_content li .order_left_content, .order_list_content li .right_detail {
+    float: left;
+    width: 40%;
+}
+
+.order_list_content li .right_detail {
+    padding-left: 2vw;
+    line-height: 2;
+}
+
+.image_left {
+    width: 35%;
+    float: left;
+}
+
+.mb_title {
+    display: none;
+}
+
+.order_right_content {
+    float: right;
+    width: 60%;
+    padding: 5vw 0;
+}
+
+.order_list_content li .order_right_content .order_count, .order_list_content li .order_right_content .order_price, .order_list_content li .order_right_content .order_total_price, .order_delete_btn {
+    float: left;
+    width: 26%;
+    text-align: center;
+    line-height: 34px;
+}
+
+.order_count select {
+    width: 80px;
+    height: 30px;
+    border-radius: 8px;
+    border: solid 1px #979797;
+    background-color: #f3f3f3;
+}
+
+/* 刪除的按鈕 */
+
+.order_delete_btn {
+    background: url(../img/cart-remove.png) no-repeat center;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+}
+
+.order_delete_btn:hover {
+    background: url(../img/cart-remove-hover.png) no-repeat center;
+}
+
+/* 配送跟付款方式 */
+
+.order_delivery {
+    background: #e8e8e8;
+    padding: 1.5vw;
+    margin: 1vw auto;
+}
+
+.order_delivery .country select, .order_delivery .payment_way select {
+    float: left;
+}
+
+.order_delivery .country, .order_delivery .payment_way, .order_delivery .country p, .order_delivery .payment_way p {
+    float: left;
+    width: 28%;
+    line-height: 30px;
+}
+
+/* 提醒事項 */
+
+.remind_detail {
+    line-height: 26px;
+    font-size: 16px;
+}
+
+/* 訂購資料 */
+
+.order_person_info {
+    margin: 1vw auto;
+}
+
+.order_title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #3f3a3a;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #3f3a3a;
+    margin: 1vw auto;
+}
+
+.order_person_info form, .credit_card_info form {
+    display: flex;
+    width: 70%;
+    flex-flow: row wrap;
+}
+
+.order_person_info form p, .credit_card_info form p {
+    width: 20%;
+    margin-top: 35px;
+}
+
+.credit_card_info form div, .order_person_info form input {
+    width: 80%;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    border: 1px solid #979797;
+    margin-top: 30px;
+    padding-left: 1%;
+    box-sizing: border-box;
+}
+
+.country select, .payment_way select {
+    height: 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    ;
+    font-family: "微軟正黑體";
+}
+
+.deliver_time {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+}
+
+.deliver_time div {
+    width: 20%;
+    margin-right: 10px;
+    display: flex;
+    flex-flow: row;
+}
+
+.deliver_time div input {
+    width: 10%;
+}
+
+.deliver_time div label {
+    margin-top: 30px;
+    line-height: 30px;
+}
+
+.order_person_info form .ps_text {
+    width: 100%;
+    text-align: right;
+    color: #8b572a;
+    font-weight: bold;
+}
+
+/* 最後結帳的部分 */
+
+.final_total_sumup {
+    display: flex;
+    flex-flow: row wrap;
+    width: 25%;
+    margin: 3vw 0 0 auto;
+}
+
+.total_part {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding-top: 1vw;
+    border-top: 1px solid #3f3a3a;
+}
+
+.final_total_sumup .left {
+    width: 40%;
+    line-height: 2.6;
+}
+
+.final_total_sumup .right {
+    width: 60%;
+    text-align: right;
+}
+
+#total, #ship_price, #payment_final {
+    font-size: 30px;
+}
+
+.final_order_btn {
+    background: #000000;
+    color: #fff;
+    font-size: 20px;
+    font-family: "微軟正黑體";
+    margin-left: auto;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    border-style: none;
+    cursor: pointer;
+    padding: 1vw 2vw;
+    margin-top: 2vw;
+}
+
+.final_order_btn:hover {
+    background: #696969;
+}
+.tpfield {
+    height: 40px;
+    width: 300px;
+    border: 1px solid gray;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+/* RWD */
+
+@media screen and (max-width: 1280px) {
+    .wrapper .cart_container {
+        margin: 2vw auto;
+        width: 90%;
+    }
+    .order_delivery .country, .order_delivery .payment_way, .order_delivery .country p, .order_delivery .payment_way p {
+        width: 32%;
+    }
+}
+
+@media screen and (max-width: 882px) {
+    .mb_title {
+        display: block;
+    }
+    .right_title {
+        display: none;
+    }
+
+    .right_detail{
+        font-size: 4vw;
+    }
+    .order_right_content, .order_list_content li .order_left_content {
+        float: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .order_person_info form, .credit_card_info form {
+        width: 100%;
+    }
+    .order_delivery .country, .order_delivery .payment_way, .order_delivery .country p, .order_delivery .payment_way p {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .order_delivery .country select, .order_delivery .payment_way select {
+        float: none;
+        width: 100%;
+    }
+    .final_total_sumup {
+        width: 80%;
+        margin: 4vw auto;
+    }
+    .final_order_btn {
+        width: 100%;
+    }
+
+    .order_list_content{
+        border:none;
+    }
+    .order_list_content li {
+        position: relative;
+        border-bottom: 1px solid #000;
+    }
+    .order_list_content li:first-child {
+        position: relative;
+        border-bottom: 1px solid #000;
+        border-top: 1px solid #000;
+    }
+    
+
+    .order_delete_btn {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+    }
+
+    .order_list_content li .order_right_content .order_count, .order_list_content li .order_right_content .order_price, .order_list_content li .order_right_content .order_total_price{
+        width: 33%;
+    }
+    .order_person_info form .ps_text {
+        text-align: left;
+        font-size: 15px;
+    }
+    .order_person_info form p, .credit_card_info form p, .credit_card_info form div, .order_person_info form input {
+        width: 100%;
+    }
+    .deliver_time div{
+        width: 30%;
+        font-size: 15px;
+    }
+    .deliver_time {
+        flex-flow: row wrap;
+    }
+   
+    .deliver_time div input {
+        margin-top:30px;
+        width: 16px;
+        height: 30px;
+        
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <title>Stylish Thank you!</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- 因為header/footer要沿用 -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/thankyou.css">
+    <script src="https://js.tappaysdk.com/tpdirect/v4"></script>
+</head>
+
+<body>
+    <!-- 串接FB API -->
+    <script src="js/FB_api.js"></script>
+    <div class="wrapper">
+        <!-- Header 無條件複製 -->
+        <div class="header clearfix">
+            <a href="index.html" class="logo"><img src="img/logo.png" alt="" /></a>
+            <ul class="menu clearfix">
+                <li><a href="#">女裝</a></li>
+                <li><a href="#">男裝</a></li>
+                <li><a href="#">配件</a></li>
+            </ul>
+            <!-- header left part -->
+            <div class="right_part">
+                <ul class="clearfix">
+                    <li class="search_bar">
+                        <input type="text" placeholder="Search" class="searchWords" />
+                        <img src="img/search.png" alt="" class="submit" />
+                    </li>
+                </ul>
+            </div>
+            <div class="right_most clearfix">
+                <li class="m_btn">
+                    <a href="cart.html" class="clearfix">
+                        <!-- 這邊先做假數字 -->
+                        <p id="cart_number"></p>
+                        <img src="img/cart.png" alt="" />
+                        <p>購物車</p>
+                    </a>
+                </li>
+                <li class="m_btn">
+                    <a href="#" class="clearfix member"><img src="img/member.png" alt="" />
+                        <p>會員</p>
+                    </a>
+                </li>
+            </div>
+        </div>
+
+        <div class="thankyou_container">
+            <div class="thankyou_details">
+                <div class="checkmark"></div>
+                <p class="thank_you">Thank You!</p>
+                <p class="describe">您的訂單編號<span id="orderNumber"></span></p>
+                <p class="msg">我們已收到您的訂單，請耐心等候～</p>
+            </div>
+
+        </div>
+
+        <!-- Footer 無條件複製 -->
+        <div class="footer">
+            <div class="footer_content clearfix">
+                <ul class="footer_left clearfix">
+                    <li><a href="#">關於Stylish</a></li>
+                    <li><a href="#">服務條款</a></li>
+                    <li><a href="#">隱私政策</a></li>
+                    <li><a href="#">聯絡我們</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <ul class="footer_right clearfix">
+                    <li class="social">
+                        <a href="#"><img src="img/line.png" alt="" /></a>
+                    </li>
+                    <li class="social">
+                        <a href="#"><img src="img/twitter.png" alt="" /></a>
+                    </li>
+                    <li class="social">
+                        <a href="#"><img src="img/facebook.png" alt="" /></a>
+                    </li>
+                </ul>
+                <div class="copyright">&copy;2018 All rights reserved.</div>
+            </div>
+        </div>
+    </div>
+    <script src="js/shopping_cart_related.js"></script>
+    <script src="js/thankyou.js"></script>
+    <!-- <script src="js/cart.js"></script> -->
+</body>
+
+</html>
