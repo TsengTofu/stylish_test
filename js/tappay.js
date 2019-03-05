@@ -183,6 +183,9 @@ function postData(data) {
 
         xhr.open("POST", `https://${HOST_NAME}/api/${API_VERSION}/order/checkout`);
         xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+        // 後來新放上去的
+        xhr.setRequestHeader('Authorization', `Bearer x${access_token}`);
+        
         xhr.onload = function () {
             resolve(this.responseText);
             return this.responseText;
