@@ -1,3 +1,16 @@
+window.fbAsyncInit = function () {
+    FB.init({
+        appId: "306113546764828", // 這是自己的app ID
+        cookie: true, // enable cookies allow the server to access
+        xfbml: true, // parse social plugins on this page
+        version: "v3.2" // The Graph API version to use for the call
+    });
+    FB.AppEvents.logPageView();
+    FB.getLoginStatus(function (response) {
+        statusChangeCallback(response);
+    });
+};
+
 // 當使用者按了登入按鈕並執行登入的動作，就會呼叫這個function
 // 檢查登入狀態
 function checkLoginState() {
@@ -26,18 +39,7 @@ function statusChangeCallback(response) {
 }
 
 
-window.fbAsyncInit = function () {
-    FB.init({
-        appId: "306113546764828", // 這是自己的app ID
-        cookie: true, // enable cookies allow the server to access
-        xfbml: true, // parse social plugins on this page
-        version: "v3.2" // The Graph API version to use for the call
-    });
-    FB.AppEvents.logPageView();
-    FB.getLoginStatus(function (response) {
-        statusChangeCallback(response);
-    });
-};
+
 
 // 載入facebook javascript sdk
 (function (d, s, id) {
