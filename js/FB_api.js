@@ -1,30 +1,3 @@
-// 當使用者按了登入按鈕並執行登入的動作，就會呼叫這個function
-// 檢查登入狀態
-function checkLoginState() {
-    FB.login(function (response) {
-        statusChangeCallback(response);
-        var accessToken = response.authResponse.accessToken;
-        localStorage.setItem('accessToken', response.authResponse.accessToken);
-    }, {
-        scope: 'email,user_photos',
-        return_scopes: true
-    });
-}
-
-function statusChangeCallback(response) {
-    console.log("statusChangeCallback");
-    console.log(response);
-    // response object 會回傳目前的 status，讓 app 知道目前使用者的 login status
-    if (response.status === "connected") {
-        // 登入
-        // if(){}
-        testAPI();
-    } else {
-        // 目前使用者並沒有登入或是我們不知道發生了甚麼事
-        //   document.getElementById("status").innerHTML =
-    }
-}
-
 
 window.fbAsyncInit = function () {
     FB.init({
@@ -49,6 +22,32 @@ window.fbAsyncInit = function () {
     js.src = "https://connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
 })(document, "script", "facebook-jssdk");
+function checkLoginState() {
+    FB.login(function (response) {
+        statusChangeCallback(response);
+        // var accessToken = response.authResponse.accessToken;
+        localStorage.setItem('accessToken', response.authResponse.accessToken);
+    }, {
+            scope: 'email,user_photos',
+            return_scopes: true
+        });
+}
+
+function statusChangeCallback(response) {
+    console.log("statusChangeCallback");
+    console.log(response);
+    // response object 會回傳目前的 status，讓 app 知道目前使用者的 login status
+    if (response.status === "connected") {
+        testAPI();
+        localStorage.setItem('accessToken', response.authResponse.accessToken);
+    } else {
+        // 目前使用者並沒有登入或是我們不知道發生了甚麼事
+        //   document.getElementById("status").innerHTML =
+    }
+}
+
+
+
 
 function testAPI() {
     // console.log("Welcome!  Fetching your information.... ");
@@ -69,7 +68,7 @@ function testAPI() {
         </ul>
       </div>
       `;
-        
+
         const loginMember = document.querySelector(".member");
         const loginMemberOrigin = document.querySelector(".member img");
         loginMemberOrigin.style.display = "none";
