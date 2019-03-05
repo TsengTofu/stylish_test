@@ -23,6 +23,16 @@ window.fbAsyncInit = function () {
 
 FB.getLoginStatus(function (response) {
     statusChangeCallback(response);
+    if (response.status === "connected") {
+        var accessToken = response.authResponse.accessToken;
+        localStorage.setItem('accessToken', response.authResponse.accessToken);
+        // 登入
+        // if(){}
+        // testAPI();
+    } else {
+        // 目前使用者並沒有登入或是我們不知道發生了甚麼事
+        //   document.getElementById("status").innerHTML =
+    }
 });
 
 
@@ -30,10 +40,8 @@ FB.getLoginStatus(function (response) {
 function statusChangeCallback(response) {
     console.log("statusChangeCallback");
     console.log(response);
-    // response object 會回傳目前的 status，讓 app 知道目前使用者的 login status
     if (response.status === "connected") {
-        // var accessToken = response.authResponse.accessToken;
-        // localStorage.setItem('accessToken', response.authResponse.accessToken);
+        
         // 登入
         // if(){}
         testAPI();
@@ -41,6 +49,9 @@ function statusChangeCallback(response) {
         // 目前使用者並沒有登入或是我們不知道發生了甚麼事
         //   document.getElementById("status").innerHTML =
     }
+
+    // response object 會回傳目前的 status，讓 app 知道目前使用者的 login status
+
 }
 
 
@@ -64,7 +75,7 @@ function testAPI() {
         </ul>
       </div>
       `;
-        
+
         const loginMember = document.querySelector(".member");
         const loginMemberOrigin = document.querySelector(".member img");
         loginMemberOrigin.style.display = "none";
@@ -89,9 +100,9 @@ function checkLoginState() {
     FB.login(function (response) {
         statusChangeCallback(response);
     }, {
-        scope: 'email,user_photos',
-        return_scopes: true
-    });
+            scope: 'email,user_photos',
+            return_scopes: true
+        });
 }
 
 //  localStorage.setItem('token', 'ImLogin')
