@@ -6,10 +6,11 @@ window.fbAsyncInit = function () {
         version: "v3.2" // The Graph API version to use for the call
     });
     FB.AppEvents.logPageView();
-    // FB.getLoginStatus(function (response) {
-    //     statusChangeCallback(response);
-    // });
 };
+
+FB.getLoginStatus(function (response) {
+    statusChangeCallback(response);
+});
 
 // 載入facebook javascript sdk
 (function (d, s, id) {
