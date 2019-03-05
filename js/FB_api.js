@@ -1,13 +1,29 @@
-// 載入facebook javascript sdk
-(function (d, s, id) {
-    var js,
-        fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-})(document, "script", "facebook-jssdk");
+// 當使用者按了登入按鈕並執行登入的動作，就會呼叫這個function
+// 檢查登入狀態
+function checkLoginState() {
+    FB.login(function (response) {
+        statusChangeCallback(response);
+        var accessToken = response.authResponse.accessToken;
+        localStorage.setItem('accessToken', response.authResponse.accessToken);
+    }, {
+        scope: 'email,user_photos',
+        return_scopes: true
+    });
+}
+
+function statusChangeCallback(response) {
+    console.log("statusChangeCallback");
+    console.log(response);
+    // response object 會回傳目前的 status，讓 app 知道目前使用者的 login status
+    if (response.status === "connected") {
+        // 登入
+        // if(){}
+        testAPI();
+    } else {
+        // 目前使用者並沒有登入或是我們不知道發生了甚麼事
+        //   document.getElementById("status").innerHTML =
+    }
+}
 
 
 window.fbAsyncInit = function () {
@@ -20,29 +36,19 @@ window.fbAsyncInit = function () {
     FB.AppEvents.logPageView();
     FB.getLoginStatus(function (response) {
         statusChangeCallback(response);
-        // var accessToken = response.authResponse.accessToken;
-        localStorage.setItem('accessToken', response.authResponse.accessToken);
     });
-    
 };
 
-
-
-
-function statusChangeCallback(response) {
-    console.log("statusChangeCallback");
-    console.log(response);
-    // response object 會回傳目前的 status，讓 app 知道目前使用者的 login status
-    if (response.status === "connected") {
-        testAPI();      
-        localStorage.setItem('accessToken', response.authResponse.accessToken);
-    } else {
-        // 目前使用者並沒有登入或是我們不知道發生了甚麼事
-        //   document.getElementById("status").innerHTML =
-    }
-}
-
-
+// 載入facebook javascript sdk
+(function (d, s, id) {
+    var js,
+        fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+})(document, "script", "facebook-jssdk");
 
 function testAPI() {
     // console.log("Welcome!  Fetching your information.... ");
@@ -81,21 +87,3 @@ function testAPI() {
 
 
 }
-
-// 當使用者按了登入按鈕並執行登入的動作，就會呼叫這個function
-// 檢查登入狀態
-function checkLoginState() {
-    FB.login(function (response) {
-        statusChangeCallback(response);
-    }, {
-        scope: 'email,user_photos',
-        return_scopes: true
-    });
-}
-
-//  localStorage.setItem('token', 'ImLogin')
-// const isLogin = localStorage.getItem('token') == 'ImLogin' ;
-//  if(isLogin)  ===>就是有登入
-
-// if (response.authResponse) {
-//同意授權並且登入執行這段
