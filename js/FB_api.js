@@ -6,9 +6,9 @@ window.fbAsyncInit = function () {
         version: "v3.2" // The Graph API version to use for the call
     });
     FB.AppEvents.logPageView();
-    FB.getLoginStatus(function (response) {
-        statusChangeCallback(response);
-    });
+    // FB.getLoginStatus(function (response) {
+    //     statusChangeCallback(response);
+    // });
 };
 
 // 當使用者按了登入按鈕並執行登入的動作，就會呼叫這個function
