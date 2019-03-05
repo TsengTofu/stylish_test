@@ -20,6 +20,8 @@ window.fbAsyncInit = function () {
     FB.AppEvents.logPageView();
     FB.getLoginStatus(function (response) {
         statusChangeCallback(response);
+        // var accessToken = response.authResponse.accessToken;
+        localStorage.setItem('accessToken', response.authResponse.accessToken);
     });
     
 };
@@ -32,10 +34,8 @@ function statusChangeCallback(response) {
     console.log(response);
     // response object 會回傳目前的 status，讓 app 知道目前使用者的 login status
     if (response.status === "connected") {
-        testAPI();
-        var accessToken = response.authResponse.accessToken;
+        testAPI();      
         localStorage.setItem('accessToken', response.authResponse.accessToken);
-        
     } else {
         // 目前使用者並沒有登入或是我們不知道發生了甚麼事
         //   document.getElementById("status").innerHTML =
