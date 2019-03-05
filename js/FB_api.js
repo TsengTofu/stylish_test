@@ -9,9 +9,9 @@ function statusChangeCallback(response) {
         localStorage.setItem('accessToken', response.authResponse.accessToken);
         testAPI();
     } else {
-        // The person is not logged into your app or we are unable to tell.
-        document.getElementById('status').innerHTML = 'Please log ' +
-            'into this app.';
+        // // The person is not logged into your app or we are unable to tell.
+        // document.getElementById('status').innerHTML = 'Please log ' +
+        //     'into this app.';
     }
 }
 
