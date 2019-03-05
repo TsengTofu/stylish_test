@@ -11,6 +11,17 @@ window.fbAsyncInit = function () {
     // });
 };
 
+// 載入facebook javascript sdk
+(function (d, s, id) {
+    var js,
+        fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+})(document, "script", "facebook-jssdk");
+
 // 當使用者按了登入按鈕並執行登入的動作，就會呼叫這個function
 // 檢查登入狀態
 function checkLoginState() {
@@ -39,18 +50,6 @@ function statusChangeCallback(response) {
 }
 
 
-
-
-// 載入facebook javascript sdk
-(function (d, s, id) {
-    var js,
-        fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-})(document, "script", "facebook-jssdk");
 
 function testAPI() {
     // console.log("Welcome!  Fetching your information.... ");
