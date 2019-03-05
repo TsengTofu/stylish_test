@@ -1,3 +1,15 @@
+// 載入facebook javascript sdk
+(function (d, s, id) {
+    var js,
+        fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+})(document, "script", "facebook-jssdk");
+
+
 window.fbAsyncInit = function () {
     FB.init({
         appId: "306113546764828", // 這是自己的app ID
@@ -12,27 +24,9 @@ FB.getLoginStatus(function (response) {
     statusChangeCallback(response);
 });
 
-// 載入facebook javascript sdk
-(function (d, s, id) {
-    var js,
-        fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-})(document, "script", "facebook-jssdk");
 
-// 當使用者按了登入按鈕並執行登入的動作，就會呼叫這個function
-// 檢查登入狀態
-function checkLoginState() {
-    FB.login(function (response) {
-        statusChangeCallback(response);
-    }, {
-        scope: 'email,user_photos',
-        return_scopes: true
-    });
-}
+
+
 
 function statusChangeCallback(response) {
     console.log("statusChangeCallback");
@@ -88,6 +82,17 @@ function testAPI() {
 
 
 
+}
+
+// 當使用者按了登入按鈕並執行登入的動作，就會呼叫這個function
+// 檢查登入狀態
+function checkLoginState() {
+    FB.login(function (response) {
+        statusChangeCallback(response);
+    }, {
+        scope: 'email,user_photos',
+        return_scopes: true
+    });
 }
 
 //  localStorage.setItem('token', 'ImLogin')
