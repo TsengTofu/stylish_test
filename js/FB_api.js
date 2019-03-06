@@ -93,15 +93,14 @@ function testAPI() {
 
 
 function testAPI_2() {
-    // console.log("Welcome!  Fetching your information.... ");
     FB.api('/me?fields=id,name,email,picture', function (response) {
         // console.log(response.picture.data.url);
         // console.log(response.picture.data.height);
         // console.log(response.picture.data.width);
         const imgUrl = `https://graph.facebook.com/${response.id}/picture?width=9999`;
         const loginMember = document.querySelector(".member");
-        // const loginMemberOrigin = document.querySelector(".member img");
-        // loginMemberOrigin.style.display = "none";
+        const loginMemberOrigin = document.querySelector(".member img");
+        loginMemberOrigin.style.display = "none";
         loginMember.style.background = `url(${imgUrl}) center no-repeat`;
         loginMember.style.zIndex = 999;
         loginMember.style.borderRadius = "999em";
