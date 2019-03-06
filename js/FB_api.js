@@ -100,7 +100,7 @@ function testAPI_2() {
         const imgUrl = `https://graph.facebook.com/${response.id}/picture?width=9999`;
         const loginMember = document.querySelector(".member");
         const loginMemberOrigin = document.querySelector(".member img");
-        loginMemberOrigin.style.display = "none";
+        // loginMemberOrigin.style.display = "none";
         loginMember.style.background = `url(${imgUrl}) center no-repeat`;
         loginMember.style.zIndex = 999;
         loginMember.style.borderRadius = "999em";
@@ -111,7 +111,8 @@ function testAPI_2() {
         let loginPic;
         loginPic.style.content =`url(${imgUrl})`;
         loginPic.style.float="left";
-        loginMember.after(loginPic);
+        loginPic.style.zIndex = 999;
+        loginMemberOrigin.before(loginPic);
     });
 }
 
