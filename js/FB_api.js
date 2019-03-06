@@ -3,8 +3,7 @@ function statusChangeCallback(response) {
     console.log(response);
     if (response.status === 'connected') {
         
-        localStorage.setItem('accessToken', JSON.stringify(response.authResponse.accessToken));
-        console.log(localStorage.setItem('accessToken', JSON.stringify(response.authResponse.accessToken)))
+        localStorage.setItem('accessToken', response.authResponse.accessToken);
         let currentUrl = window.location.href;
         console.log(currentUrl);
         if (currentUrl.includes('profile')) {
