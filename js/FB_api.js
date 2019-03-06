@@ -76,15 +76,15 @@ function testAPI() {
       </div>
       `;
 
-        const loginMember = document.querySelector(".member");
-        const loginMemberOrigin = document.querySelector(".member img");
-        loginMemberOrigin.style.display = "none";
-        loginMember.style.background = `url(${imgUrl}) center no-repeat`;
-        loginMember.style.zIndex = 999;
-        loginMember.style.borderRadius = "999em";
-        loginMember.style.width = "44px";
-        loginMember.style.height = "44px";
-        loginMember.style.backgroundSize = "contain";
+        // const loginMember = document.querySelector(".member");
+        // const loginMemberOrigin = document.querySelector(".member img");
+        // loginMemberOrigin.style.display = "none";
+        // loginMember.style.background = `url(${imgUrl}) center no-repeat`;
+        // loginMember.style.zIndex = 999;
+        // loginMember.style.borderRadius = "999em";
+        // loginMember.style.width = "44px";
+        // loginMember.style.height = "44px";
+        // loginMember.style.backgroundSize = "contain";
 
         const fbBtn = document.querySelector(".fb");
         fbBtn.style.display = "none";
