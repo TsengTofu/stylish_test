@@ -5,6 +5,7 @@ function statusChangeCallback(response) {
         localStorage.setItem('accessToken', response.authResponse.accessToken);
         console.log(localStorage.setItem('accessToken', response.authResponse.accessToken));
         let currentUrl = window.location.href;
+        console.log(currentUrl);
         if (currentUrl.includes('profile')) {
             alert("url contains profile");
             // 如果是在profile頁面
