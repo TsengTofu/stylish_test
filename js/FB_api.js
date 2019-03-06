@@ -104,9 +104,13 @@ function testAPI_2() {
         loginMember.style.background = `url(${imgUrl}) center no-repeat`;
         loginMember.style.zIndex = 999;
         loginMember.style.borderRadius = "999em";
-        loginMember.style.width = "40px";
-        loginMember.style.height = "40px";
+        // loginMember.style.width = "40px";
+        // loginMember.style.height = "40px";
         loginMember.style.backgroundSize = "contain";
+        let memberPic;
+        memberPic.style.content = `url(${imgUrl}) center no-repeat`;
+        memberPic.style.float ="left";
+        loginMember.before(memberPic);
     });
 }
 
