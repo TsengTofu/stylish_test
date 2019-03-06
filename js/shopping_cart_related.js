@@ -5,7 +5,7 @@
 // F12 > Application > 左半邊會有storage，可以看到key/value
 
 // 購物車的抓資料
-var orderList = JSON.parse(lStorage.getItem('orderList')) || [];
+var orderList = JSON.parse(localStorage.getItem('orderList')) || [];
 // localstorage 只能接受字串
 // 確認一下使用者使否登入 
 var access_token = JSON.parse(localStorage.getItem('accessToken')) || [];
