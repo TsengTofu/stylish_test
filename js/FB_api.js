@@ -98,7 +98,8 @@ function testAPI_2() {
         // console.log(response.picture.data.height);
         // console.log(response.picture.data.width);
         const imgUrl = `https://graph.facebook.com/${response.id}/picture?width=9999`;
-        const loginMember = document.querySelector(".member");
+        // const loginMember = document.querySelector(".member");
+        const loginMember = document.querySelector(".header .right_most li:last-child::before");
         const loginMemberOrigin = document.querySelector(".member img");
         loginMemberOrigin.style.display = "none";
         // loginMember.style.background = `url(${imgUrl}) center no-repeat`;
@@ -108,10 +109,8 @@ function testAPI_2() {
         // loginMember.style.height = "40px";
         // loginMember.style.backgroundSize = "contain";
 
-        let loginPic;
-        loginPic.style.content =`url(${imgUrl})`;
-        loginPic.style.float="left";
-        loginMemberOrigin.before(loginPic);
+        loginMember.style.content =`url(${imgUrl})`;
+  
     });
 }
 
