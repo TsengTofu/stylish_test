@@ -1,18 +1,28 @@
 function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
-    // The response object is returned with a status field that lets the
-    // app know the current login status of the person.
-    // Full docs on the response object can be found in the documentation
-    // for FB.getLoginStatus().
     if (response.status === 'connected') {
         localStorage.setItem('accessToken', response.authResponse.accessToken);
         console.log(localStorage.setItem('accessToken', response.authResponse.accessToken));
-        testAPI();
+        let currentUrl = window.location.href;
+        if (currentUrl.includes('profile')) {
+            alert("url contains profile");
+            // 如果是在profile頁面
+            testAPI();
+        } else {
+            // 如果不是
+            const loginMember = document.querySelector(".member");
+            const loginMemberOrigin = document.querySelector(".member img");
+            loginMemberOrigin.style.display = "none";
+            loginMember.style.background = `url(${imgUrl}) center no-repeat`;
+            loginMember.style.zIndex = 999;
+            loginMember.style.borderRadius = "999em";
+            loginMember.style.width = "44px";
+            loginMember.style.height = "44px";
+            loginMember.style.backgroundSize = "contain";
+        }
     } else {
         // The person is not logged into your app or we are unable to tell.
-        // document.getElementById('status').innerHTML = 'Please log ' +
-        //     'into this app.';
     }
 }
 

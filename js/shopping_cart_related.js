@@ -4,7 +4,11 @@
 // localStorage.removeItem(); 刪除
 // F12 > Application > 左半邊會有storage，可以看到key/value
 
-var orderList = JSON.parse(localStorage.getItem('orderList')) || [];
+// 購物車的抓資料
+var orderList = JSON.parse(lStorage.getItem('orderList')) || [];
+// localstorage 只能接受字串
+// 確認一下使用者使否登入 
+var access_token = JSON.parse(localStorage.getItem('accessToken')) || [];
 addItemToCart();
 function addItemToCart() {
     var count = 0;

@@ -201,7 +201,8 @@ function postData(data) {
 
 // 偵測送出資料按鈕被點
 submitBtn.addEventListener("click", () => {
-
+    
+    console.log(access_token);
     if (checkCartList() !== false && checkCustomerInfo() !== false) {
         submitBtn.textContent = '處理中';
 
