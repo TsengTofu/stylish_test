@@ -24,7 +24,7 @@ const getProductData = function () {
 };
 
 console.log(
-  `http://${hostName}/api/${apiVersion}/products/details${
+  `https://${hostName}/api/${apiVersion}/products/details${
   productDetailUrl.search
   }`
 );

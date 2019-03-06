@@ -37,7 +37,7 @@ const printBannerData = BannersAll => {
   data.forEach(item => {
     const { picture, story } = item;
     // 宣告變數 在css裡面要給他class
-    const imageURL = `http://${hostName}` + picture;
+    const imageURL = `https://${hostName}` + picture;
     const bannerTitle = story.split("\r\n");
     const bannerViceTitle = bannerTitle.pop();
     const contentInBanner = `
