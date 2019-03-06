@@ -101,13 +101,17 @@ function testAPI_2() {
         const loginMember = document.querySelector(".member");
         const loginMemberOrigin = document.querySelector(".member img");
         loginMemberOrigin.style.display = "none";
-        loginMember.style.background = `url(${imgUrl}) center no-repeat`;
+        // loginMember.style.background = `url(${imgUrl}) center no-repeat`;
         loginMember.style.zIndex = 999;
         loginMember.style.borderRadius = "999em";
-        loginMember.style.width = "44px";
-        loginMember.style.height = "44px";
-        loginMember.style.backgroundSize = "contain";
-        loginMember.style.textAlign = "left";
+        // loginMember.style.width = "40px";
+        // loginMember.style.height = "40px";
+        // loginMember.style.backgroundSize = "contain";
+
+        let loginPic;
+        loginPic.style.content =`url(${imgUrl})`;
+        loginPic.style.float="left";
+        loginMemberOrigin.before(loginPic);
     });
 }
 
