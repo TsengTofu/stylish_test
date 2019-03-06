@@ -111,6 +111,7 @@ function testAPI_2() {
         memberPic.style.content = `url(${imgUrl}) center no-repeat`;
         memberPic.style.float ="left";
         loginMember.before(memberPic);
+        console.log(loginMember.before(memberPic));
     });
 }
 
