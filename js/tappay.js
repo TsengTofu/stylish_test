@@ -195,6 +195,7 @@ function postData(data) {
         }
 
         xhr.send(data);
+        console.log(data);
     });
 }
 
