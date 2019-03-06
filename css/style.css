@@ -492,7 +492,8 @@
   }
   /*google image replace with only css*/
   .header .right_most li:last-child::before {
-    content: url("../img/member-mobile.png");
+    content:attr(data-image url) '，'; 
+    /* url("../img/member-mobile.png"); */
     float: left;
   }
   .header .right_most li:last-child img {
