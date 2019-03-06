@@ -9,6 +9,7 @@ var orderList = JSON.parse(localStorage.getItem('orderList')) || [];
 // localstorage 只能接受字串
 // 確認一下使用者使否登入 
 var access_token = JSON.parse(localStorage.getItem('accessToken')) || [];
+console.log(access_token);
 addItemToCart();
 function addItemToCart() {
     var count = 0;

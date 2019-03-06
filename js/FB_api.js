@@ -3,7 +3,6 @@ function statusChangeCallback(response) {
     console.log(response);
     if (response.status === 'connected') {
         localStorage.setItem('accessToken', response.authResponse.accessToken);
-        console.log(localStorage.setItem('accessToken', response.authResponse.accessToken));
         let currentUrl = window.location.href;
         console.log(currentUrl);
         if (currentUrl.includes('profile')) {
@@ -102,7 +101,7 @@ function testAPI_2() {
         const loginMemberOrigin = document.querySelector(".member img");
         loginMemberOrigin.style.display = "none";
         loginMember.style.background = `url(${imgUrl}) center no-repeat`;
-        loginMember.style.zIndex = 99999999999;
+        loginMember.style.zIndex = 999;
         loginMember.style.borderRadius = "999em";
         loginMember.style.width = "44px";
         loginMember.style.height = "44px";
