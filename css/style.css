@@ -606,6 +606,10 @@
   .header .menu {
     padding: 4vw 0vw;
   }
+  .header .menu li a {
+    font-size: 1em;
+  }
+  
 }
 
 @media screen and (max-width: 320px) {
