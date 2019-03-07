@@ -589,6 +589,11 @@
   #banner {
     height: 300px;
   }
+
+  .member p{
+    position: absolute;
+    right: -48px;
+  }
   .banners h3 {
     position: absolute;
     top: 8vw;

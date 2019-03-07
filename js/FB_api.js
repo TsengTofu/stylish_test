@@ -110,6 +110,5 @@ function testAPI_2() {
         loginMember.style.height = "44px";
         loginMember.style.backgroundSize = "contain";
         login.className = "no-before";
-        loginMember.before(loginMember);
     });
 }
