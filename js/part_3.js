@@ -126,17 +126,19 @@ const changeBtn = btn => {
   }
   if (btn.target.textContent === "女裝") {
     getDataParse("products/women");
-    window.location.href = `https://tsengtofu.github.io/stylish_test/index.html?${productCategory}`;
     productCategory = "products/women";
+    let tag = "women";
+    window.location.href = `https://tsengtofu.github.io/stylish_test/index.html?${tag}`;
   } else if (btn.target.textContent === "男裝") {
     getDataParse("products/men");
-    window.location.href = `https://tsengtofu.github.io/stylish_test/index.html?${productCategory}`;
     productCategory = "products/men";
-    
+    let tag = "men";
+    window.location.href = `https://tsengtofu.github.io/stylish_test/index.html?${tag}`;
   } else {
     getDataParse("products/accessories");
-    window.location.href = `https://tsengtofu.github.io/stylish_test/index.html?${productCategory}`;
     productCategory = "products/accessories";
+    let tag = "accessories";
+    window.location.href = `https://tsengtofu.github.io/stylish_test/index.html?${tag}`;
   }
 };
 
