@@ -76,7 +76,7 @@ function testAPI() {
       </div>
       `;
 
-      const login = document.querySelector(".member_apart");
+        const login = document.querySelector(".member_apart");
         const loginMember = document.querySelector(".member");
         const loginMemberOrigin = document.querySelector(".member img");
         loginMemberOrigin.style.display = "none";
@@ -86,7 +86,6 @@ function testAPI() {
         loginMember.style.width = "44px";
         loginMember.style.height = "44px";
         loginMember.style.backgroundSize = "contain";
-
         login.className = "no-before";
 
 
@@ -100,6 +99,7 @@ function testAPI_2() {
         // console.log(response.picture.data.height);
         // console.log(response.picture.data.width);
         const imgUrl = `https://graph.facebook.com/${response.id}/picture?width=9999`;
+        const login = document.querySelector(".member_apart");
         const loginMember = document.querySelector(".member");
         const loginMemberOrigin = document.querySelector(".member img");
         loginMemberOrigin.style.display = "none";
@@ -109,5 +109,7 @@ function testAPI_2() {
         loginMember.style.width = "44px";
         loginMember.style.height = "44px";
         loginMember.style.backgroundSize = "contain";
+        login.className = "no-before";
+        loginMember.before(loginMember);
     });
 }
