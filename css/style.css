@@ -600,12 +600,17 @@
   }
 }
 
+@media screen and (max-width: 414px) {
+  #banner{
+    height: 160px;
+  }
+}
+
+
+
 @media screen and (max-width: 360px) {
   .header .menu {
     padding: 2vw 0vw;
-  }
-  #banner{
-    height: 160px;
   }
 }
 
