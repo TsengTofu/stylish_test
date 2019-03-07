@@ -149,10 +149,10 @@ if (tagName === "women") {
   getDataParse("products/women");
 } else if (tagName === "woman") {
   getDataParse("products/men");
-  productCategory = "products/men";
+  // productCategory = "products/men";
 } else {
   getDataParse("products/accessories");
-  productCategory = "products/accessories";
+  // productCategory = "products/accessories";
 }
 
 //part4_search engine api
