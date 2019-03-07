@@ -419,7 +419,7 @@
     padding: 0;
   }
   .header .logo {
-    width: 32%;
+    width: 30%;
     margin: 0 auto;
     float: none;
     padding: 4vw;
@@ -574,7 +574,7 @@
 
 @media screen and (max-width: 768px) {
   #banner {
-    height: 200px;
+    height: 350px;
   }
   .banners h3 {
     position: absolute;
