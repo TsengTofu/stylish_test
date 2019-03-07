@@ -502,7 +502,7 @@
     float: left;
   }
   /*google image replace with only css*/
-  .header .right_most li:last-child::before {
+  .header .right_most .member_apart::before {
     content: url("../img/member-mobile.png");
     float: left;
   }
