@@ -84,6 +84,11 @@ function testAPI() {
         loginMember.style.height = "44px";
         loginMember.style.backgroundSize = "contain";
 
+        var color = window.getComputedStyle(
+            document.querySelector('.member_apart'), ':before'
+        ).getPropertyValue('content')
+        console.log(color);
+
     });
 }
 
