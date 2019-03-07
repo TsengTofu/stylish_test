@@ -425,7 +425,7 @@
     background: #313538;
     float: none;
     box-sizing: border-box;
-    padding: 2vw;
+    padding: 1.5vw;
   }
   .header .right_part {
     float: left;
@@ -440,7 +440,7 @@
     position: inherit;
   }
   .header .right_part .search_bar>img {
-    top: 3vw;
+    top: 2vw;
     right: 4vw;
   }
   .banners h3 {
@@ -594,11 +594,18 @@
   .header .right_most li {
     padding: 0 11vw;
   }
+
+  .header .right_part .search_bar>img{
+    top:1.5vw;
+  }
 }
 
 @media screen and (max-width: 360px) {
   .header .menu {
-    padding: 4vw 0vw;
+    padding: 2vw 0vw;
+  }
+  #banner{
+    height: 160px;
   }
 }
 
@@ -607,7 +614,12 @@
     padding: 0 9vw;
   }
   .header .menu li a {
-    padding: 2vw 10vw;
+    padding: 1vw 10vw;
+  }
+  .header .right_part .search_bar>img{
+    max-width: 32px;
+    top:1vw;
+
   }
   .shop_list li {
     vertical-align: top;
