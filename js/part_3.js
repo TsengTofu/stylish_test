@@ -124,20 +124,18 @@ const changeBtn = btn => {
   while (productList.firstChild) {
     productList.removeChild(productList.firstChild);
   }
-  const URL = "https://tsengtofu.github.io/stylish_test/index.html";
-  const searchParams = new URLSearchParams(`?${productCategory}`);
-  URL.search = searchParams;
-  URL.href;
-  console.log(URL.href);
   if (btn.target.textContent === "女裝") {
     getDataParse("products/women");
     productCategory = "products/women";
+    btn.setAttribute("href",`https://tsengtofu.github.io/stylish_test/index.html?${productCategory}`);
   } else if (btn.target.textContent === "男裝") {
     getDataParse("products/men");
     productCategory = "products/men";
+    btn.setAttribute("href",`https://tsengtofu.github.io/stylish_test/index.html?${productCategory}`);
   } else {
     getDataParse("products/accessories");
     productCategory = "products/accessories";
+    btn.setAttribute("href",`https://tsengtofu.github.io/stylish_test/index.html?${productCategory}`);
   }
 };
 
