@@ -54,6 +54,11 @@ window.fbAsyncInit = function () {
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
+var color = window.getComputedStyle(
+    document.querySelector('.member_apart'), ':before'
+).getPropertyValue('content');
+console.log(color);
+
 function testAPI() {
     // console.log("Welcome!  Fetching your information.... ");
     FB.api('/me?fields=id,name,email,picture', function (response) {
@@ -84,10 +89,7 @@ function testAPI() {
         loginMember.style.height = "44px";
         loginMember.style.backgroundSize = "contain";
 
-        var color = window.getComputedStyle(
-            document.querySelector('.member_apart'), ':before'
-        ).getPropertyValue('content')
-        console.log(color);
+     
 
     });
 }
