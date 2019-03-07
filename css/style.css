@@ -614,9 +614,7 @@
 
   .header .right_part .search_bar>img{
     top:1.5vw;
-  }
-
-  
+  }  
 }
 
 @media screen and (max-width: 414px) {

@@ -20,10 +20,10 @@ const getData = api => {
     // console.log(`${api}`); 直接把api當成變數
     // Q：但為何這樣就可以直接抓到women / men / all /...?
     // `模版字符串（template literal）` ----ES6
-    xhr.onload = function() {
+    xhr.onload = function () {
       resolve(this.responseText);
     };
-    xhr.onerror = function() {
+    xhr.onerror = function () {
       reject("There is Nothing.");
     };
     xhr.send();
@@ -56,8 +56,8 @@ const printData = data => {
     // 宣告變數
     const productLi = document.createElement("li");
     const productLink = document.createElement("a");
-    
-    productLink.setAttribute("href",`product.html?id=${id}`);
+
+    productLink.setAttribute("href", `product.html?id=${id}`);
     const productPhoto = document.createElement("img");
     productPhoto.src = main_image;
 
@@ -124,9 +124,14 @@ const changeBtn = btn => {
   while (productList.firstChild) {
     productList.removeChild(productList.firstChild);
   }
+  const URL = "https://tsengtofu.github.io/stylish_test/index.html";
+  const searchParams = new URLSearchParams(`?${productCategory}`);
   if (btn.target.textContent === "女裝") {
     getDataParse("products/women");
     productCategory = "products/women";
+    URL.search = searchParams;
+    URL.href;
+    console.log(URL.href)
   } else if (btn.target.textContent === "男裝") {
     getDataParse("products/men");
     productCategory = "products/men";
@@ -144,7 +149,7 @@ categoryMenus.addEventListener("click", changeBtn);
 //part4_search engine api
 document.querySelector(".submit").addEventListener(
   "click",
-  function(event) {
+  function (event) {
     while (productList.firstChild) {
       productList.removeChild(productList.firstChild);
     }
@@ -185,7 +190,7 @@ window.addEventListener("scroll", () => {
   // console.log(farBottomHeight);
   if (farBottomHeight < windowHeight) {
     // console.log("check it when true will run");
-    
+
     if (productPages > 0 && productPages !== undefined) {
       // http://[HOST_NAME]/api/[API_VERSION]/products/all?paging=1
       getDataParse(`${productCategory}?paging=${productPages}`);
