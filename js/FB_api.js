@@ -54,10 +54,7 @@ window.fbAsyncInit = function () {
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-var color = window.getComputedStyle(
-    document.querySelector('.member_apart'), ':before'
-).content;
-console.log(color);
+
 
 function testAPI() {
     // console.log("Welcome!  Fetching your information.... ");
@@ -89,7 +86,8 @@ function testAPI() {
         loginMember.style.height = "44px";
         loginMember.style.backgroundSize = "contain";
 
-     
+        loginMember.className = "no-before";
+
 
     });
 }

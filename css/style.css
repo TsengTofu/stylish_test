@@ -506,6 +506,8 @@
     content: url("../img/member-mobile.png");
     float: left;
   }
+  .no-before::before{content:none;}
+
   .header .right_most li:last-child img {
     display: none;
   }
