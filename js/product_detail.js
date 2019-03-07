@@ -14,6 +14,9 @@ const getProductData = function () {
       `https://${hostName}/api/${apiVersion}/products/details${productDetailUrl.search}`
     );
     xhr.onload = function () {
+      // loader
+      const loading = document.querySelector('.loader');
+      loading.style.display = "block";
       resolve(this.responseText);
     };
     xhr.onerror = function () {
@@ -30,11 +33,7 @@ console.log(
 );
 
 const getProductDataParse = function () {
-  return getProductData().then(result => {
-    // loader
-    const loading = document.querySelector('.loader');
-    
-    
+  return getProductData().then(result => {  
 
     const productsDetail = JSON.parse(result);
     //data是JSON物件裡面的key
