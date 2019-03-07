@@ -58,6 +58,7 @@
 
 .header .menu li a:hover {
   color: #8b572a;
+  transition:0.5s;
 }
 
 .header .right_part {
