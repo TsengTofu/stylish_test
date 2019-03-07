@@ -442,7 +442,7 @@
     background: #313538;
     float: none;
     box-sizing: border-box;
-    padding: 3vw 1.5vw;
+    padding: 2vw 1.5vw;
   }
   .header .right_part {
     float: left;
@@ -472,7 +472,7 @@
     width: 90%;
   }
   .shop_list li {
-    width: 48%;
+    width: 30%;
     font-size: 14px;
     letter-spacing: 0;
     margin: 3vw 0.8vw;
