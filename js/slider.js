@@ -35,14 +35,15 @@ const printBannerData = BannersAll => {
   const { data } = BannersAll;
   console.log(BannersAll);
   data.forEach(item => {
-    const { picture, story } = item;
+    const { picture, story, product_id } = item;
     // 宣告變數 在css裡面要給他class
+    const id = product_id;
     const imageURL = `https://${hostName}` + picture;
     const bannerTitle = story.split("\r\n");
     const bannerViceTitle = bannerTitle.pop();
     const contentInBanner = `
         <div class="banners" style="background-image:url(${imageURL})">
-            <a href="#">
+            <a href= "product.html?id=${id}">
                 <h3>
                     ${bannerTitle.join("<br>")}
                     <p class="banner_content">${bannerViceTitle}</p>

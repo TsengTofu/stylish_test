@@ -6,12 +6,13 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135655413-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'UA-135655413-1');
     </script>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
     <title>Stylish Thank you!</title>
     <link rel="stylesheet" href="css/reset.css" />
     <!-- 因為header/footer要沿用 -->
@@ -28,16 +29,16 @@
         <div class="header clearfix">
             <a href="index.html" class="logo"><img src="img/logo.png" alt="" /></a>
             <ul class="menu clearfix">
-                <li><a href="#">女裝</a></li>
-                <li><a href="#">男裝</a></li>
-                <li><a href="#">配件</a></li>
+                <li><a href="index.html?tag=women">女裝</a></li>
+                <li><a href="index.html?tag=men">男裝</a></li>
+                <li><a href="index.html?tag=accessories">配件</a></li>
             </ul>
             <!-- header left part -->
             <div class="right_part">
                 <ul class="clearfix">
                     <li class="search_bar">
                         <input type="text" placeholder="Search" class="searchWords" />
-                        <img src="img/search.png" alt="" class="submit" />
+                        <div class="submit"></div>
                     </li>
                 </ul>
             </div>

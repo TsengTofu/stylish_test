@@ -162,6 +162,7 @@ function checkCartList() {
 // 所以會得到一個true / false的值
 // 確認基本資訊
 function checkCustomerInfo() {
+    const re = /1{2}[0-9]{8}$/;
     for (var i = 0; i < customerInfo.length; i++) {
         if (customerInfo[i].value !== "" && customerInfo[i].value !== null) {
             alert("訂購資料全部填妥，很棒！");
@@ -185,7 +186,7 @@ function postData(data) {
         xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
         // 後來新放上去的
         xhr.setRequestHeader('Authorization', `Bearer x${access_token}`);
-        
+
         xhr.onload = function () {
             resolve(this.responseText);
             return this.responseText;
@@ -202,7 +203,7 @@ function postData(data) {
 
 // 偵測送出資料按鈕被點
 submitBtn.addEventListener("click", () => {
-    
+
     console.log(access_token);
     if (checkCartList() !== false && checkCustomerInfo() !== false) {
         submitBtn.textContent = '處理中';

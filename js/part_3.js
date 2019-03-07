@@ -148,10 +148,10 @@ var tagName = params.get('tag');
 if (tagName === "women") {
   getDataParse("products/women");
   productCategory = "products/women";
-} else if (tagName === "woman") {
+} else if (tagName === "men") {
   getDataParse("products/men");
   productCategory = "products/men";
-} else {
+} else if(tagName === "accessories"){
   getDataParse("products/accessories");
   productCategory = "products/accessories";
 }
