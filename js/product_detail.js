@@ -15,8 +15,6 @@ const getProductData = function () {
     );
     xhr.onload = function () {
       // loader
-      const loading = document.querySelector('.loader');
-      loading.style.display = "block";
       resolve(this.responseText);
     };
     xhr.onerror = function () {
@@ -34,7 +32,8 @@ console.log(
 
 const getProductDataParse = function () {
   return getProductData().then(result => {  
-
+    const loading = document.querySelector('.loader');
+    loading.style.display = "block";
     const productsDetail = JSON.parse(result);
     //data是JSON物件裡面的key
     printProductDetailData(productsDetail);
