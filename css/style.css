@@ -425,7 +425,7 @@
     background: #313538;
     float: none;
     box-sizing: border-box;
-    padding: 1.5vw;
+    padding: 3vw 1.5vw;
   }
   .header .right_part {
     float: left;
