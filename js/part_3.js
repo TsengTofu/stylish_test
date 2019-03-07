@@ -138,13 +138,8 @@ const changeBtn = btn => {
 
 categoryMenus.addEventListener("click", changeBtn);
 
-// 以上是part3
-// var categoryMenu = new URL(window.location.href);
-// let params = categoryMenu.searchParams;
-// var tagName = params.get('tag');
-// if(tagName==="women"){
 
-// }
+// 以上是part3
 
 //part4_search engine api
 document.querySelector(".submit").addEventListener(
