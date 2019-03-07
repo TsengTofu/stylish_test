@@ -419,7 +419,7 @@
     padding: 0;
   }
   .header .logo {
-    width: 42%;
+    width: 32%;
     margin: 0 auto;
     float: none;
     padding: 4vw;
@@ -429,7 +429,7 @@
     background: #313538;
     float: none;
     box-sizing: border-box;
-    padding: 4vw 2vw;
+    padding: 2vw;
   }
   .header .right_part {
     float: left;
@@ -599,36 +599,6 @@
   .header .right_most li {
     padding: 0 11vw;
   }
-  /*--------footer 不照切版本--------
-    /*.footer{
-        margin-bottom: 16vw;
-    }
-    .footer .footer_left{
-        font-size: 4vw;
-        float: none;
-        width: 100%;
-    }
-
-    .footer .footer_left li {
-        border: none;
-        float: none;
-        width: 100%;
-        line-height: 2.5;
-    }
-    .footer .footer_right{
-        float: none;
-        width: 51%;
-        margin:0 auto;
-    }
-    .footer .social a{
-        margin:2vw;
-    }
-    .footer .footer_right li:last-child{
-        float: none;
-    }
-    .footer_content{
-        width: 90%;
-    }*/
 }
 
 @media screen and (max-width: 360px) {

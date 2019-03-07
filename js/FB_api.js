@@ -1,3 +1,6 @@
+// 這邊是ESLINT要解決的問題，所以下面註解不可以刪掉
+/* exported checkLoginState */
+
 function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -19,9 +22,6 @@ function statusChangeCallback(response) {
     }
 }
 
-// This function is called when someone finishes with the Login
-// Button.  See the onlogin handler attached to it in the sample
-// code below.
 function checkLoginState() {
     FB.getLoginStatus(function (response) {
         statusChangeCallback(response);
@@ -99,22 +99,13 @@ function testAPI_2() {
         // console.log(response.picture.data.width);
         const imgUrl = `https://graph.facebook.com/${response.id}/picture?width=9999`;
         const loginMember = document.querySelector(".member");
-        const loginMemberOrigin = document.querySelector(".origin");
+        const loginMemberOrigin = document.querySelector(".member img");
         loginMemberOrigin.style.display = "none";
         loginMember.style.background = `url(${imgUrl}) center no-repeat`;
         loginMember.style.zIndex = 999;
         loginMember.style.borderRadius = "999em";
-        loginMember.style.width = "40px";
-        loginMember.style.height = "40px";
+        loginMember.style.width = "44px";
+        loginMember.style.height = "44px";
         loginMember.style.backgroundSize = "contain";
-        loginMember.style.float = "left";
-
-        // how to use data-image
     });
 }
-
-
-
-
-
-
