@@ -140,13 +140,19 @@ categoryMenus.addEventListener("click", changeBtn);
 
 // 以上是part3
 
-// tab menu not done yet
+
 var categoryMenu = new URL(window.location.href);
 console.log(categoryMenu);
 let params = categoryMenu.searchParams;
 var tagName = params.get('tag');
-if(tagName==="woman"){
+if (tagName === "women") {
   getDataParse("products/women");
+} else if (tagName === "woman") {
+  getDataParse("products/men");
+  productCategory = "products/men";
+} else {
+  getDataParse("products/accessories");
+  productCategory = "products/accessories";
 }
 
 //part4_search engine api
