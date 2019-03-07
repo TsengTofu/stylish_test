@@ -99,7 +99,7 @@ function testAPI_2() {
         // console.log(response.picture.data.width);
         const imgUrl = `https://graph.facebook.com/${response.id}/picture?width=9999`;
         const loginMember = document.querySelector(".member");
-        const loginMemberOrigin = document.querySelector(".m_btn a img");
+        const loginMemberOrigin = document.querySelector(".origin");
         loginMemberOrigin.style.display = "none";
         loginMember.style.background = `url(${imgUrl}) center no-repeat`;
         loginMember.style.zIndex = 999;
