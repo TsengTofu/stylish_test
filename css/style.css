@@ -492,8 +492,7 @@
   }
   /*google image replace with only css*/
   .header .right_most li:last-child::before {
-    content:attr(data-image url) '，'; 
-    /* url("../img/member-mobile.png"); */
+    content: url("../img/member-mobile.png");
     float: left;
   }
   .header .right_most li:last-child img {
@@ -523,6 +522,10 @@
     position: absolute;
     bottom: 5px;
     left: 0;
+  }
+
+  .member{
+    display: none;
   }
   .shop_list .color_list li {
     width: 4vw;
