@@ -14,8 +14,6 @@ const getProductData = function () {
       `https://${hostName}/api/${apiVersion}/products/details${productDetailUrl.search}`
     );
     xhr.onload = function () {
-      const loading = document.querySelector('.loader');
-      loading.style.display = "block";
       resolve(this.responseText);
     };
     xhr.onerror = function () {
