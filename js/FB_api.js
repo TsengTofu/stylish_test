@@ -75,11 +75,7 @@ function testAPI() {
         </ul>
       </div>
       `;
-      var elem = document.getElementById(".member_apart");
-      var theCSSprop = window.getComputedStyle(elem, ':before').getPropertyValue("background-color");
-       console.log(theCSSprop);
-
-        const loginMember = document.querySelector(".member");
+         const loginMember = document.querySelector(".member");
         const loginMemberOrigin = document.querySelector(".member img");
         loginMemberOrigin.style.display = "none";
         loginMember.style.background = `url(${imgUrl}) center no-repeat`;
@@ -110,5 +106,9 @@ function testAPI_2() {
         loginMember.style.width = "44px";
         loginMember.style.height = "44px";
         loginMember.style.backgroundSize = "contain";
+
+        var elem = document.getElementById(".member_apart");
+        var theCSSprop = window.getComputedStyle(elem, ':before').getPropertyValue("background-color");
+         console.log(theCSSprop);
     });
 }
