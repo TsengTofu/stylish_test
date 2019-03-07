@@ -14,7 +14,6 @@ const getProductData = function () {
       `https://${hostName}/api/${apiVersion}/products/details${productDetailUrl.search}`
     );
     xhr.onload = function () {
-      // loader
       resolve(this.responseText);
     };
     xhr.onerror = function () {

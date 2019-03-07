@@ -146,9 +146,10 @@
   border: 16px solid #f3f3f3; 
   border-top: 16px solid #8b572a;
   border-radius: 50%;
-  width: 5vw;
-  height: 5vw;
+  width: 3vw;
+  height: 3vw;
   animation: spin 2s linear infinite;
+  margin: 0 auto;
 }
 
 @keyframes spin {
