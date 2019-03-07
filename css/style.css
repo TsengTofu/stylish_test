@@ -422,7 +422,7 @@
     width: 30%;
     margin: 0 auto;
     float: none;
-    padding: 4vw;
+    padding: 3vw;
   }
   .header .menu {
     width: 100%;
@@ -591,6 +591,7 @@
     padding: 2vw 10vw;
     box-sizing: border-box;
     text-indent: 0;
+    width: 100%;
   }
   .header .menu li {
     float: left;
