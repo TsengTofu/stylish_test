@@ -78,10 +78,10 @@ function testAPI() {
 
         window.getComputedStyle.content(
             document.querySelector('.member_apart'), ':before'
-        );
+        ).getPropertyValue("content");
         console.log(window.getComputedStyle.content(
             document.querySelector('.member_apart'), ':before'
-        ))
+        ).getPropertyValue("content"))
 
         const loginMember = document.querySelector(".member");
         const loginMemberOrigin = document.querySelector(".member img");
