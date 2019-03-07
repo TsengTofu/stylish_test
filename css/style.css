@@ -472,7 +472,7 @@
     width: 90%;
   }
   .shop_list li {
-    width: 30%;
+    width: 31.5%;
     font-size: 14px;
     letter-spacing: 0;
     margin: 1vw 0.8vw;
@@ -584,7 +584,7 @@
 
 @media screen and (max-width: 768px) {
   #banner {
-    height: 350px;
+    height: 300px;
   }
   .banners h3 {
     position: absolute;
