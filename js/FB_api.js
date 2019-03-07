@@ -107,6 +107,7 @@ function testAPI_2() {
         loginMember.style.width = "40px";
         loginMember.style.height = "40px";
         loginMember.style.backgroundSize = "contain";
+        loginMember.style.float = "left";
 
         // how to use data-image
     });
