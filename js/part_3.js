@@ -124,7 +124,7 @@ const changeBtn = btn => {
   while (productList.firstChild) {
     productList.removeChild(productList.firstChild);
   }
-  if (btn.target.textContent === "女裝" && tagName==="women") {
+  if (btn.target.textContent === "女裝") {
     getDataParse("products/women");
     productCategory = "products/women";
   } else if (btn.target.textContent === "男裝") {
