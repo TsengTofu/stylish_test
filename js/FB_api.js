@@ -86,7 +86,7 @@ function testAPI() {
         loginMember.style.width = "44px";
         loginMember.style.height = "44px";
         loginMember.style.backgroundSize = "contain";
-        login.className = "no-before";
+        login.classList = "no-before";
 
 
     });
@@ -109,6 +109,6 @@ function testAPI_2() {
         loginMember.style.width = "44px";
         loginMember.style.height = "44px";
         loginMember.style.backgroundSize = "contain";
-        login.className = "no-before";
+        login.classList = "no-before";
     });
 }
