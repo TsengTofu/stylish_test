@@ -75,13 +75,9 @@ function testAPI() {
         </ul>
       </div>
       `;
-
-        window.getComputedStyle(
-            document.querySelector('.member_apart'), ':before'
-        ).getPropertyValue("content");
-        console.log(window.getComputedStyle(
-            document.querySelector('.member_apart'), ':before'
-        ).getPropertyValue("content"))
+      var elem = document.getElementById(".member_apart");
+      var theCSSprop = window.getComputedStyle(elem, ':before').getPropertyValue("background-color");
+       console.log(theCSSprop);
 
         const loginMember = document.querySelector(".member");
         const loginMemberOrigin = document.querySelector(".member img");
