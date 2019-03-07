@@ -615,6 +615,10 @@
   .header .right_part .search_bar>img{
     top:1.5vw;
   }
+
+  .shop_list li {
+    width: 48%;
+  }
 }
 
 @media screen and (max-width: 414px) {
