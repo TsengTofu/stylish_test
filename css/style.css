@@ -588,6 +588,8 @@
     width: 100%;
   }  
   .member p{
+    display: block;
+    color: #fff;
     position: absolute;
     right: -48px;
   }
