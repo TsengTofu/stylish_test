@@ -323,6 +323,10 @@
   transition: ease;
 }
 
+.member p{
+  display: none;
+}
+
 @keyframes slide-in {
   0% {
     opacity: 0;
@@ -582,9 +586,7 @@
   }
   .footer .copyright {
     width: 100%;
-  }
-
-  
+  }  
   .member p{
     position: absolute;
     right: -48px;
