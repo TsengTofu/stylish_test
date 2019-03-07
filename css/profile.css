@@ -1,6 +1,7 @@
 .profile_content_login_membership{
     width:75%;
     margin:0 auto;
+    padding:6vw;
 }
 
 .user_photo{
@@ -22,8 +23,7 @@
     font-size: 24px;
 }
 
-.u-flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.fb_iframe_widget{
+    width: 100%;
+    text-align: center;
 }
