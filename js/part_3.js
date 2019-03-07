@@ -126,12 +126,12 @@ const changeBtn = btn => {
   }
   const URL = "https://tsengtofu.github.io/stylish_test/index.html";
   const searchParams = new URLSearchParams(`?${productCategory}`);
+  URL.search = searchParams;
+  URL.href;
+  console.log(URL.href);
   if (btn.target.textContent === "女裝") {
     getDataParse("products/women");
     productCategory = "products/women";
-    URL.search = searchParams;
-    URL.href;
-    console.log(URL.href)
   } else if (btn.target.textContent === "男裝") {
     getDataParse("products/men");
     productCategory = "products/men";
