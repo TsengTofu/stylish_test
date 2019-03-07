@@ -76,10 +76,10 @@ function testAPI() {
       </div>
       `;
 
-        window.getComputedStyle.content(
+        window.getComputedStyle(
             document.querySelector('.member_apart'), ':before'
         ).getPropertyValue("content");
-        console.log(window.getComputedStyle.content(
+        console.log(window.getComputedStyle(
             document.querySelector('.member_apart'), ':before'
         ).getPropertyValue("content"))
 
