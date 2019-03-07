@@ -76,6 +76,7 @@ function testAPI() {
       </div>
       `;
 
+      const login = document.querySelector(".member_apart");
         const loginMember = document.querySelector(".member");
         const loginMemberOrigin = document.querySelector(".member img");
         loginMemberOrigin.style.display = "none";
@@ -86,7 +87,7 @@ function testAPI() {
         loginMember.style.height = "44px";
         loginMember.style.backgroundSize = "contain";
 
-        loginMember.className = "no-before";
+        login.className = "no-before";
 
 
     });
