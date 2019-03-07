@@ -5,7 +5,7 @@ function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
     if (response.status === 'connected') {
-        
+
         localStorage.setItem('accessToken', response.authResponse.accessToken);
         let currentUrl = window.location.href;
         console.log(currentUrl);
@@ -75,6 +75,14 @@ function testAPI() {
         </ul>
       </div>
       `;
+
+        window.getComputedStyle(
+            document.querySelector('.header .right_most li:last-child'), ':before'
+        );
+
+        console.log(window.getComputedStyle(
+            document.querySelector('.header .right_most li:last-child'), ':before'
+        ))
 
         const loginMember = document.querySelector(".member");
         const loginMemberOrigin = document.querySelector(".member img");
