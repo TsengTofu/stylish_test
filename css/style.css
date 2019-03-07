@@ -329,23 +329,23 @@
 
 @keyframes slide-in {
   0% {
-    opacity: 0;
-    left: 100%;
+    opacity: 1;
+    /* left: 100%; */
   }
   100% {
     opacity: 1;
-    left: 0;
+    /* left: 0; */
   }
 }
 
 @keyframes slide-out {
   0% {
     opacity: 1;
-    right: 100%;
+    /* left: 0%; */
   }
   100% {
     opacity: 0;
-    right: 0%;
+    /* left: 100%; */
   }
 }
 
