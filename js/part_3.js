@@ -133,8 +133,8 @@ const changeBtn = btn => {
   } else {
     getDataParse("products/accessories");
     productCategory = "products/accessories";
+    window.location.href = `https://tsengtofu.github.io/stylish_test/index.html?${productCategory}`;
   }
-  window.location.href = `https://tsengtofu.github.io/stylish_test/index.html?${productCategory}`;
 };
 
 categoryMenus.addEventListener("click", changeBtn);
