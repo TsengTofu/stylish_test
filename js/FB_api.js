@@ -77,11 +77,10 @@ function testAPI() {
       `;
 
         window.getComputedStyle(
-            document.querySelector('.header .right_most li:last-child'), ':before'
+            document.querySelector('.header .right_most li'), ':before'
         );
-
         console.log(window.getComputedStyle(
-            document.querySelector('.header .right_most li:last-child'), ':before'
+            document.querySelector('.header .right_most li'), ':before'
         ))
 
         const loginMember = document.querySelector(".member");
