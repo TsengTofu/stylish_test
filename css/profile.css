@@ -22,7 +22,8 @@
     font-size: 24px;
 }
 
-.fb .fb_iframe_widget{
-    margin:0 auto;
-    width: 20%;
+.u-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
