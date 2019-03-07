@@ -56,7 +56,7 @@ window.fbAsyncInit = function () {
 
 var color = window.getComputedStyle(
     document.querySelector('.member_apart'), ':before'
-).getPropertyValue('content');
+).content;
 console.log(color);
 
 function testAPI() {
