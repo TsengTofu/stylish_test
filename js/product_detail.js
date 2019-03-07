@@ -31,6 +31,11 @@ console.log(
 
 const getProductDataParse = function () {
   return getProductData().then(result => {
+    // loader
+    const loading = document.querySelector('.loader');
+    
+    
+
     const productsDetail = JSON.parse(result);
     //data是JSON物件裡面的key
     printProductDetailData(productsDetail);
@@ -43,6 +48,8 @@ const getProductDataParse = function () {
 
 getProductDataParse()
 // console.log();
+
+
 
 // 輸出資料
 const printProductDetailData = productsDetail => {
