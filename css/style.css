@@ -475,7 +475,7 @@
     width: 30%;
     font-size: 14px;
     letter-spacing: 0;
-    margin: 3vw 0.8vw;
+    margin: 1vw 0.8vw;
   }
   .header .right_most {
     position: fixed;
@@ -535,8 +535,8 @@
     left: 0;
   }
   .shop_list .color_list li {
-    width: 4vw;
-    height: 4vw;
+    width: 2vw;
+    height: 2vw;
   }
   .footer {
     margin-bottom: 16vw;
